@@ -58,39 +58,6 @@ For example:
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image and Text Layout</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .image-container {
-            width: 48%;
-            text-align: center;
-        }
-        .image-container img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-        }
-        .question-answer {
-            font-size: 18px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .point {
-            color: red;
-        }
-    </style>
-</head>
 <body>
     <div class="content">
         <!-- Left image container -->
