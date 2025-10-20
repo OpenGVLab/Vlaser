@@ -1,6 +1,6 @@
 # Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning
 
- [[📜 Paper]]() [[⭐️Project Page]](https://internvl.github.io/blog/2025-10-11-Vlaser/) [[🤗 Model]](https://huggingface.co/collections/OpenGVLab/vlaser-68e9fd4178da453c348997f8) 
+ [[📜 Paper]](https://arxiv.org/pdf/2510.11027) [[⭐️Project Page]](https://internvl.github.io/blog/2025-10-11-Vlaser/) [[🤗 Model]](https://huggingface.co/collections/OpenGVLab/vlaser-68e9fd4178da453c348997f8) 
  <!-- [[📝 Chinese Post]](https://mp.weixin.qq.com/s/FmjG0Gp5ow7mm2Vzd9ppPg) -->
 
 
@@ -44,10 +44,10 @@ This project is released under the [MIT License](LICENSE).
 If you find this work helpful in your research, please consider giving this repo a star ⭐ and citing our paper:
 
 ```bibtex
-@article{luo2025visual,
-  title={Visual Embodied Brain: Let Multimodal Large Language Models See, Think, and Control in Spaces},
-  author={Luo, Gen and Yang, Ganlin and Gong, Ziyang and Chen, Guanzhou and Duan, Haonan and Cui, Erfei and Tong, Ronglei and Hou, Zhi and Zhang, Tianyi and Chen, Zhe and others},
-  journal={arXiv preprint arXiv:2506.00123},
+@article{yang2025vlaser,
+  title={Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning},
+  author={Yang, Ganlin and Zhang, Tianyi and Hao, Haoran and Wang, Weiyun and Liu, Yibin and Wang, Dehui and Chen, Guanzhou and Cai, Zijian and Chen, Junting and Su, Weijie and others},
+  journal={arXiv preprint arXiv:2510.11027},
   year={2025}
 }
 ```
