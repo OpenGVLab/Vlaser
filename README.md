@@ -20,19 +20,23 @@ Furthermore, we systematically examine how different VLM initializations affect 
 ## 🗞️ News
 - **`2025-10-13`**: 🤖 We release Vlaser VLM model (Vlaser-2B and Vlaser-8B) as well as VLA model (Vlaser-2B-VLA) on [🤗Vlaser](https://huggingface.co/collections/OpenGVLab/vlaser-68e9fd4178da453c348997f8).
 - **`2025-10-13`**: 🤖 We release the training and inference code of Vlaser VLM based on [InternVL3](https://github.com/OpenGVLab/InternVL).
+- **`2025-11-7`**: 🤖 We release the training and inference code of Vlaser VLA based on [open-pi-zero](https://github.com/allenzren/open-pi-zero).
 
 
 ## 📆 Todo
 - [x] Release Vlaser-2B and Vlaser-8B ckpt for VLM embodied reasoning.
 - [x] Release Vlaser-2B-VLA model for end-to-end robot control in SimplerEnv (WidowX and Google Robot).
 - [x] Release the training and evaluation code for Vlaser VLMs.
-- [ ] Release the training and evaluation code for Vlaser VLAs.
+- [x] Release the training and evaluation code for Vlaser VLAs.
 - [ ] Release the Dataset Generation Pipeline.
 - [ ] Release the Vlaser-6M Dataset.
 
 
 ## Vlaser VLM Quick Start
 Please refer to [Vlaser_VLM](./Vlaser_VLM) for details.
+
+## Vlaser VLA Quick Start
+Please refer to [Vlaser_VLA](./Vlaser_VLA) for details.
 
 
 ## 🎫 License
