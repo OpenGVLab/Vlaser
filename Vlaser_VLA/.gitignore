@@ -172,6 +172,4 @@ cython_debug/
 #.idea/
 train/
 log/
-config/train/fractal.yaml
 eval_bridge/
-eval*

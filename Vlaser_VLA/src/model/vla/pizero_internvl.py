@@ -403,8 +403,11 @@ class PiZero(nn.Module, NoSyncBase):
 
     @property
     def trainable_vlm_parameters(self):
-        
-        return list(self.internvl_model.parameters())
+        return (
+            list(self.vision_tower.parameters())
+            + list(self.multi_modal_projector.parameters())
+            + self.trainable_gemma_parameters
+        )
     
     @property
     def trainable_vision_parameters(self):
@@ -1304,15 +1307,7 @@ class PiZeroInference(PiZero):
         )
 
 def integration_step(action, t, delta_t, model_step, method="euler"):
-    """
-    单步数值积分器
-    Args:
-        action: 当前状态 (tensor)
-        t: 当前时间 (tensor)
-        delta_t: 时间步长 (float)
-        model_step: 一个函数 f(action, t) → action_vel
-        method: "euler", "heun", "rk4"
-    """
+    
     if method == "euler":
         # 一阶显式欧拉
         action_vel = model_step(action, t)
