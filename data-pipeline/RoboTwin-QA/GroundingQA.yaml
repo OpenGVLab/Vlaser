@@ -1,0 +1,32 @@
+# ===== Runtime =====
+multi_gpu: false
+gpu_id: 0
+
+# ===== vLLM 模型 =====
+resume_checkpoint_path: "/home/algo/models/Qwen2.5-VL-7B-Instruct/Qwen2.5-VL-7B-Instruct"
+pretrained_model_path: "/home/algo/models/Qwen2.5-VL-7B-Instruct/Qwen2.5-VL-7B-Instruct"
+
+
+vllm_tp: 2
+
+per_device_batch_size: 1
+log_dir: "/home/algo/RoboTwinQA/GroundingQA"
+max_samples: null
+samples_per_file: 80
+
+data:
+  train:
+    images_root: "/home/algo/video_agent_group/daqi/RoboTwin_make_data/dataset/aloha-agilex"
+    instructions_root: "/mnt/data/RoboTwin_open_source_data/dataset/aloha-agilex"  
+    inst_pick: "seen"                                                                 
+    include_domains: ["Aloha-AgileX", "Aloha-AgileX_domain_randomized"]
+    episode_glob: "episode*"
+    resize_to: [320, 240]
+    max_images: null
+
+vision:
+  config:
+    num_image_tokens: 4
+
+max_seq_len: 128
+tokenizer_padding: "right"
