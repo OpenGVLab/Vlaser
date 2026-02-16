@@ -1,9 +1,0 @@
-{
-  "VSI-100k.room_size_sft": {
-    "root": "",
-    "annotation": "dataset path",
-    "data_augment": false,
-    "repeat_time": 1,
-    "length": 1513
-}
-}
