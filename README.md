@@ -1,4 +1,4 @@
-# Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning
+# [ICLR 2026] Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning
 
  [[📜 Paper]](https://arxiv.org/pdf/2510.11027) [[⭐️Project Page]](https://internvl.github.io/blog/2025-10-11-Vlaser/) [[🤗 Model]](https://huggingface.co/collections/OpenGVLab/vlaser-68e9fd4178da453c348997f8) 
  <!-- [[📝 Chinese Post]](https://mp.weixin.qq.com/s/FmjG0Gp5ow7mm2Vzd9ppPg) -->
@@ -21,23 +21,28 @@ Furthermore, we systematically examine how different VLM initializations affect 
 - **`2025-10-13`**: 🤖 We release Vlaser VLM model (Vlaser-2B and Vlaser-8B) as well as VLA model (Vlaser-2B-VLA) on [🤗Vlaser](https://huggingface.co/collections/OpenGVLab/vlaser-68e9fd4178da453c348997f8).
 - **`2025-10-13`**: 🤖 We release the training and inference code of Vlaser VLM based on [InternVL3](https://github.com/OpenGVLab/InternVL).
 - **`2025-11-7`**: 🤖 We release the training and inference code of Vlaser VLA based on [open-pi-zero](https://github.com/allenzren/open-pi-zero).
+- **`2026-01-27`**: 🤖 Vlaser was accepted by ICLR 2026, congrats!
+- **`2026-02-15`**: 🤖 We release the data pipeline for in-domain data based on [open-pi-zero](https://github.com/allenzren/open-pi-zero).
 
 
 ## 📆 Todo
 - [x] Release Vlaser-2B and Vlaser-8B ckpt for VLM embodied reasoning.
-- [x] Release Vlaser-2B-VLA model for end-to-end robot control in SimplerEnv (WidowX and Google Robot).
+- [x] Release Vlaser-2B-VLA model for end-to-end robot control in SimplerEnv (WidowX and Google Robot) and RoboTwin 2.0.
 - [x] Release the training and evaluation code for Vlaser VLMs.
 - [x] Release the training and evaluation code for Vlaser VLAs.
-- [ ] Release the Dataset Generation Pipeline.
-- [ ] Release the Vlaser-6M Dataset.
+- [x] Release the Dataset Generation Pipeline.
+- [ ] Release the Vlaser-6M Dataset (Ongoing, expected on March, 2026).
 
 
 ## Vlaser VLM Quick Start
 Please refer to [Vlaser_VLM](./Vlaser_VLM) for details.
 
 ## Vlaser VLA Quick Start
-Please refer to [Vlaser_VLA](./Vlaser_VLA) for details.
+For SimplerEnv, Please refer to [Vlaser_VLA/Simpler](./Vlaser_VLA/Simpler) for details.
+For RoboTwin 2.0, Please refer to [Vlaser_VLA/RoboTwin](./Vlaser_VLA/RoboTwin) for details.
 
+## Data pipeline Quick Start
+Please refer to [data-pipeline](./data-pipeline) for details.
 
 ## 🎫 License
 
