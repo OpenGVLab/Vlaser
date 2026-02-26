@@ -1,0 +1,72 @@
+12/18 [15:48:17] INFO     | >> Saving config to            train_mine_new.py:208
+                          /mnt/inspurfs/efm_t/yangganlin/m
+                          odels/workspace_tourist/internvl
+                          a_2B_ckpt/internvl3_2B_embodied_
+                          0922/config.yaml
+                 INFO     | >> Loading models and          train_mine_new.py:221
+                          optimizer
+Loading InternVLA_Model...
+Using flash_attention_2 for LLaMA
+using parallel decoding
+Resizing position embedding from 448 to 224...
+12/18 [15:48:21] INFO     | >> # Parameters (in millions): train_mine_new.py:346
+                          2127.611 Total, 2127.611
+                          Trainable
+# total trainable params: 1815723022
+                 INFO     | >> Creating Dataset with       train_mine_new.py:379
+                          Mixture `robotwin`
+12/18 [15:50:07] INFO     | >> Preparing model, optimizer  train_mine_new.py:468
+                          and dataloaders
+  1%|          | 42/3475 [00:53<1:12:37,  1.27s/it]
+Traceback (most recent call last):
+  File "/mnt/inspurfs/efm_t/yangganlin/code/RoboTwin/policy/internvla_2B_parallel_decoding/vla-scripts/train_mine_new.py", line 847, in <module>
+    train()
+  File "/mnt/inspurfs/efm_t/yangganlin/code/RoboTwin/policy/internvla_2B_parallel_decoding/vla-scripts/train_mine_new.py", line 715, in train
+    accelerator.backward(loss)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/accelerate/accelerator.py", line 2351, in backward
+    self.deepspeed_engine_wrapped.backward(loss, **kwargs)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/accelerate/utils/deepspeed.py", line 266, in backward
+    self.engine.backward(loss, **kwargs)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 2216, in backward
+    self._do_optimizer_backward(loss, retain_graph)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 2162, in _do_optimizer_backward
+    self.optimizer.backward(loss, retain_graph=retain_graph)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 2082, in backward
+    self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/fp16/loss_scaler.py", line 63, in backward
+    scaled_loss.backward(retain_graph=retain_graph)
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+    torch.autograd.backward(
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/inspurfs/efm_t/yangganlin/code/RoboTwin/policy/internvla_2B_parallel_decoding/vla-scripts/train_mine_new.py", line 847, in <module>
+[rank0]:     train()
+[rank0]:   File "/mnt/inspurfs/efm_t/yangganlin/code/RoboTwin/policy/internvla_2B_parallel_decoding/vla-scripts/train_mine_new.py", line 715, in train
+[rank0]:     accelerator.backward(loss)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/accelerate/accelerator.py", line 2351, in backward
+[rank0]:     self.deepspeed_engine_wrapped.backward(loss, **kwargs)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/accelerate/utils/deepspeed.py", line 266, in backward
+[rank0]:     self.engine.backward(loss, **kwargs)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 2216, in backward
+[rank0]:     self._do_optimizer_backward(loss, retain_graph)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 2162, in _do_optimizer_backward
+[rank0]:     self.optimizer.backward(loss, retain_graph=retain_graph)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 2082, in backward
+[rank0]:     self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/deepspeed/runtime/fp16/loss_scaler.py", line 63, in backward
+[rank0]:     scaled_loss.backward(retain_graph=retain_graph)
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]: KeyboardInterrupt

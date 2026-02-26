@@ -1,0 +1,109 @@
+# /liangzhixuan-oss->/liangzhixuan-oss
+
+wandb:
+  resume: False
+  run_id: 'internvla_2B'
+  api_key: 'your_api_key'
+
+experiment:
+    project: "internvla_2B_12_robotwin_tasks"
+    name: "v1"
+    output_dir: "your_output_dir"
+    #max_train_examples_t2i: 20000000
+    max_train_examples_mmu: 40000000
+    save_every: 10000
+    eval_every: 250000
+    generate_every: 1000
+    log_every: 50
+    log_grad_norm_every: 500
+    resume_from_checkpoint: 'latest'
+
+model:
+    model_name_or_path: "your_model_path, for example: VLMs/all"
+    resume: false
+    pretrained_checkpoint: null
+    mlp_path: null
+    vision_select_layer: -2
+    drop_path_rate: 0.0
+    grad_checkpoint: true
+    use_fast_tokenizer: false
+    ps_version: 'v2'
+
+    showo:
+        load_from_showo: False
+        pretrained_model_path: null
+
+
+dataset:
+    data_root_dir: "collected_robotwin2.0_github_latest_data_filter_redundant_piper_12_tasks_randomized_clean_table"
+    instruction_path: "piper_12_tasks_instructions_randomized_clean_table"
+    data_mix: "robotwin"
+    shuffle_buffer_size: 256000
+    image_aug: False
+    img_history_size: 1
+    action_chunk_size: 8
+    action_vocab_size: 1024
+    state_max: 3.0
+    state_min: -3
+
+    image_size: 224
+    state_vocab_size: 512
+    gen_type: "t2i"
+    und_type: "llava_pretrain"
+    combined_loader_mode: "min_size"
+    add_system_prompt: False
+    params:
+        num_workers: 32
+
+    preprocessing:
+        max_seq_length: 381 # for text tokens
+        center_crop: False
+        random_flip: False
+
+optimizer:
+    name: adamw
+    params: # default adamw params
+        learning_rate: 0.0001
+        scale_lr: False # scale learning rate by total batch size
+        beta1: 0.9
+        beta2: 0.999
+        weight_decay: 0.01
+        epsilon: 1e-8
+
+lr_scheduler:
+    scheduler: "cosine"
+    params:
+        learning_rate: ${optimizer.params.learning_rate}
+        warmup_ratio: 0.03
+
+training:
+    gradient_accumulation_steps: 1
+    noise_type: "mask"
+    per_device_batch_size: 64
+    mixed_precision: "bf16"
+    enable_tf32: True
+    seed: 10086
+    num_train_epochs: 10
+    overfit_one_batch: False
+    cond_dropout_prob: 0.1
+    min_masking_rate: 0.0
+    label_smoothing: 0.0
+    max_grad_norm: 1.0
+    guidance_scale: 0.0
+    generation_timesteps: 12
+    t2i_coeff: 1.0
+    lm_coeff: 0.1
+    mmu_coeff: 1.0
+    target_length: 40
+    parallel_decoding: Ture
+
+    max_seq_length: 448
+    force_image_size: 224
+    down_sample_ratio: 0.5
+    dynamic_image_size: false
+    use_thumbnail: false
+    min_dynamic_patch: 1
+    max_dynamic_patch: 12
+    normalize_type: 'imagenet'
+    conv_style: 'internvl2_5'
+

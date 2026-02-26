@@ -1,0 +1,310 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            kd5tb1eu5ijjikmm1tx5i6cbjdkn1tnc:
+                args:
+                    - config=configs/training_based_on_internvl3_2B.yaml
+                codePath: policy/internvla_2B_parallel_decoding/vla-scripts/train_mine_new.py
+                codePathLocal: vla-scripts/train_mine_new.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "12.4"
+                disk:
+                    /:
+                        total: "525599903744"
+                        used: "64697176064"
+                email: dehui.wang2005@gmail.com
+                executable: /mnt/petrelfs/yangganlin/anaconda3/envs/InternVLA/bin/python3.10
+                git:
+                    commit: af313c1a603354e68f0c35c3f3f1df66cf23362b
+                    remote: https://github.com/RoboTwin-Platform/RoboTwin.git
+                gpu: NVIDIA A800-SXM4-80GB
+                gpu_count: 8
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-2d7b5798-5525-2f34-e870-a69af4ca8ced
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-79a7da8d-6f05-6f80-9a8d-9c96d9c3c7e6
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-efbb4258-b99a-500f-f2a3-eece5c2686d9
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-1e002637-0ba5-8b43-355a-65504dfc39d2
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-bc2cce7e-742d-68e3-e096-bbd65f7c7e2d
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-9a346946-3084-4c87-9c8a-cdf22a731091
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-c9aa38c8-aff5-5147-7569-854a026ed6fb
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A800-SXM4-80GB
+                      uuid: GPU-dacfc93c-b32a-bcba-3d51-f34a60843534
+                host: HOST-10-140-60-179
+                memory:
+                    total: "2163887579136"
+                os: Linux-3.10.0-957.el7.x86_64-x86_64-with-glibc2.17
+                program: /mnt/inspurfs/efm_t/yangganlin/code/RoboTwin/policy/internvla_2B_parallel_decoding/vla-scripts/train_mine_new.py
+                python: CPython 3.10.19
+                root: /mnt/inspurfs/efm_t/yangganlin/code/RoboTwin/policy/internvla_2B_parallel_decoding
+                slurm:
+                    cluster_name: cluster_t
+                    conf: /etc/slurm/slurm.conf
+                    cpus_on_node: "120"
+                    distribution: cyclic
+                    gtids: "0"
+                    job_cpus_per_node_pack_group_0: 120(x4)
+                    job_gid: "200002309"
+                    job_id: "5541708"
+                    job_name: accelerate
+                    job_nodelist: HOST-10-140-60-179
+                    job_partition: baihu
+                    job_uid: "200002309"
+                    job_user: yangganlin
+                    jobid: "5541708"
+                    launch_node_ipaddr: 10.140.60.208
+                    localid: "0"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: HOST-10-140-60-179,HOST-10-140-66-[38,47,113]
+                    nprocs: "1"
+                    ntasks: "1"
+                    prio_process: "0"
+                    procid: "0"
+                    srun_comm_host: 10.140.60.208
+                    srun_comm_port: "41357"
+                    step_gpus: 0,1,2,3,4,5,6,7
+                    step_id: "6"
+                    step_launcher_port: "41357"
+                    step_nodelist: HOST-10-140-60-179
+                    step_num_nodes: "1"
+                    step_num_tasks: "1"
+                    step_tasks_per_node: "1"
+                    stepid: "6"
+                    submit_dir: /mnt/inspurfs/efm_t/yangganlin/code/RoboTwin/policy/internvla_2B_parallel_decoding
+                    submit_host: HOST-10-140-60-208
+                    task_pid: "117636"
+                    tasks_per_node: "1"
+                    topology_addr: HOST-10-140-60-179
+                    topology_addr_pattern: node
+                    umask: "0002"
+                    working_cluster: cluster_t:HOST-10-140-60-207:6817:9216:109
+                startedAt: "2025-12-18T07:48:12.953661Z"
+                writerId: kd5tb1eu5ijjikmm1tx5i6cbjdkn1tnc
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 63
+                - 71
+                - 83
+                - 98
+                - 106
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 63
+                - 71
+                - 83
+                - 98
+                - 106
+            "3":
+                - 13
+                - 14
+            "4": 3.10.19
+            "5": 0.23.0
+            "6": 4.52.4
+            "12": 0.23.0
+            "13": linux-x86_64
+config:
+    value: configs/training_based_on_internvl3_2B.yaml
+dataset.action_chunk_size:
+    value: 8
+dataset.action_vocab_size:
+    value: 1024
+dataset.add_system_prompt:
+    value: false
+dataset.combined_loader_mode:
+    value: min_size
+dataset.data_mix:
+    value: robotwin
+dataset.data_root_dir:
+    value: /mnt/petrelfs/share_data/yangganlin/data/robot_data/share_to_dehui/collected_robotwin2.0_github_latest_data_filter_redundant_piper_12_tasks_randomized_clean_table
+dataset.gen_type:
+    value: t2i
+dataset.image_aug:
+    value: false
+dataset.image_size:
+    value: 224
+dataset.img_history_size:
+    value: 1
+dataset.instruction_path:
+    value: /mnt/petrelfs/share_data/yangganlin/data/robot_data/share_to_dehui/piper_12_tasks_instructions_randomized_clean_table
+dataset.params.num_workers:
+    value: 32
+dataset.preprocessing.center_crop:
+    value: false
+dataset.preprocessing.max_seq_length:
+    value: 381
+dataset.preprocessing.random_flip:
+    value: false
+dataset.shuffle_buffer_size:
+    value: 256000
+dataset.state_max:
+    value: 3
+dataset.state_min:
+    value: -3
+dataset.state_vocab_size:
+    value: 512
+dataset.und_type:
+    value: llava_pretrain
+experiment.eval_every:
+    value: 250000
+experiment.generate_every:
+    value: 1000
+experiment.log_every:
+    value: 50
+experiment.log_grad_norm_every:
+    value: 500
+experiment.max_train_examples_mmu:
+    value: 40000000
+experiment.name:
+    value: v1
+experiment.output_dir:
+    value: /mnt/inspurfs/efm_t/yangganlin/models/workspace_tourist/internvla_2B_ckpt/internvl3_2B_embodied_0922
+experiment.project:
+    value: internvla_2B_12_robotwin_tasks
+experiment.save_every:
+    value: 10000
+lr_scheduler.params.learning_rate:
+    value: 0.0001
+lr_scheduler.params.warmup_ratio:
+    value: 0.03
+lr_scheduler.scheduler:
+    value: cosine
+model.drop_path_rate:
+    value: 0
+model.grad_checkpoint:
+    value: true
+model.mlp_path:
+    value: null
+model.model_name_or_path:
+    value: /mnt/petrelfs/share_data/yangganlin/models/vebrain/2B/20250922
+model.pretrained_checkpoint:
+    value: null
+model.ps_version:
+    value: v2
+model.resume:
+    value: false
+model.showo.load_from_showo:
+    value: false
+model.showo.pretrained_model_path:
+    value: null
+model.use_fast_tokenizer:
+    value: false
+model.vision_select_layer:
+    value: -2
+optimizer.name:
+    value: adamw
+optimizer.params.beta1:
+    value: 0.9
+optimizer.params.beta2:
+    value: 0.999
+optimizer.params.epsilon:
+    value: 1e-08
+optimizer.params.learning_rate:
+    value: 0.0001
+optimizer.params.scale_lr:
+    value: false
+optimizer.params.weight_decay:
+    value: 0.01
+training.cond_dropout_prob:
+    value: 0.1
+training.conv_style:
+    value: internvl2_5
+training.down_sample_ratio:
+    value: 0.5
+training.dynamic_image_size:
+    value: false
+training.enable_tf32:
+    value: true
+training.force_image_size:
+    value: 224
+training.generation_timesteps:
+    value: 12
+training.gradient_accumulation_steps:
+    value: 1
+training.guidance_scale:
+    value: 0
+training.label_smoothing:
+    value: 0
+training.lm_coeff:
+    value: 0.1
+training.max_dynamic_patch:
+    value: 12
+training.max_grad_norm:
+    value: 1
+training.max_seq_length:
+    value: 448
+training.min_dynamic_patch:
+    value: 1
+training.min_masking_rate:
+    value: 0
+training.mixed_precision:
+    value: bf16
+training.mmu_coeff:
+    value: 1
+training.noise_type:
+    value: mask
+training.normalize_type:
+    value: imagenet
+training.num_train_epochs:
+    value: 10
+training.overfit_one_batch:
+    value: false
+training.parallel_decoding:
+    value: Ture
+training.per_device_batch_size:
+    value: 64
+training.seed:
+    value: 10086
+training.t2i_coeff:
+    value: 1
+training.target_length:
+    value: 40
+training.use_thumbnail:
+    value: false
+wandb.api_key:
+    value: 82817aead932845e30ed3032f3c9e7193c297478
+wandb.resume:
+    value: false
+wandb.run_id:
+    value: q539m8bi_2025-12-18batch_size_32_no_vision

@@ -1,0 +1,42 @@
+# conflict
+transformers @ git+https://github.com/moojink/transformers-openvla-oft.git
+peft==0.11.1
+timm==0.9.12
+tokenizers==0.19.1
+
+dlimp @ git+https://github.com/moojink/dlimp_openvla
+
+accelerate<1
+bitsandbytes==0.42.0
+decord
+deepspeed>=0.13.5
+diffusers
+draccus==0.8.0
+einops==0.6.1
+einops-exts==0.0.4
+fastapi
+huggingface_hub
+imageio
+json-numpy
+jsonlines
+matplotlib
+numpy==1.26.4
+opencv-python
+orjson
+protobuf
+pycocoevalcap
+pyyaml
+rich
+scikit-learn>=1.2.2
+scipy
+sentencepiece==0.1.99
+shortuuid
+tensorboardX
+tensorflow==2.15.0
+tensorflow_datasets==4.9.3
+tensorflow_graphics==2021.12.3
+termcolor
+tqdm
+uvicorn
+wandb
+yacs

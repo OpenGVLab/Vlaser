@@ -1,0 +1,94 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="CssBrowserCompatibilityForProperties" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CssConvertColorToHexInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CssConvertColorToRgbInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CssMissingSemicolon" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LanguageDetectionInspection" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
+    <inspection_tool class="PyArgumentEqualDefaultInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyAugmentAssignmentInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyBehaveInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyClassicStyleClassInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.12" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyMandatoryEncodingInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyMissingOrEmptyDocstringInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyMissingTypeHintsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="43">
+            <item index="0" class="java.lang.String" itemvalue="protobuf" />
+            <item index="1" class="java.lang.String" itemvalue="huggingface-hub" />
+            <item index="2" class="java.lang.String" itemvalue="SQLAlchemy" />
+            <item index="3" class="java.lang.String" itemvalue="cloudpickle" />
+            <item index="4" class="java.lang.String" itemvalue="httplib2" />
+            <item index="5" class="java.lang.String" itemvalue="crcmod" />
+            <item index="6" class="java.lang.String" itemvalue="datasets" />
+            <item index="7" class="java.lang.String" itemvalue="numpy" />
+            <item index="8" class="java.lang.String" itemvalue="fastavro" />
+            <item index="9" class="java.lang.String" itemvalue="fsspec" />
+            <item index="10" class="java.lang.String" itemvalue="docopt" />
+            <item index="11" class="java.lang.String" itemvalue="filelock" />
+            <item index="12" class="java.lang.String" itemvalue="langchain" />
+            <item index="13" class="java.lang.String" itemvalue="apache-beam" />
+            <item index="14" class="java.lang.String" itemvalue="urllib3" />
+            <item index="15" class="java.lang.String" itemvalue="pyparsing" />
+            <item index="16" class="java.lang.String" itemvalue="pyarrow" />
+            <item index="17" class="java.lang.String" itemvalue="dnspython" />
+            <item index="18" class="java.lang.String" itemvalue="objsize" />
+            <item index="19" class="java.lang.String" itemvalue="pydantic" />
+            <item index="20" class="java.lang.String" itemvalue="pymongo" />
+            <item index="21" class="java.lang.String" itemvalue="orjson" />
+            <item index="22" class="java.lang.String" itemvalue="pinecone-client" />
+            <item index="23" class="java.lang.String" itemvalue="dill" />
+            <item index="24" class="java.lang.String" itemvalue="loguru" />
+            <item index="25" class="java.lang.String" itemvalue="zstandard" />
+            <item index="26" class="java.lang.String" itemvalue="pandas" />
+            <item index="27" class="java.lang.String" itemvalue="dataclasses-json" />
+            <item index="28" class="java.lang.String" itemvalue="openai" />
+            <item index="29" class="java.lang.String" itemvalue="regex" />
+            <item index="30" class="java.lang.String" itemvalue="asyncio" />
+            <item index="31" class="java.lang.String" itemvalue="fasteners" />
+            <item index="32" class="java.lang.String" itemvalue="proto-plus" />
+            <item index="33" class="java.lang.String" itemvalue="typing_extensions" />
+            <item index="34" class="java.lang.String" itemvalue="hdfs" />
+            <item index="35" class="java.lang.String" itemvalue="responses" />
+            <item index="36" class="java.lang.String" itemvalue="grpcio" />
+            <item index="37" class="java.lang.String" itemvalue="atari_py" />
+            <item index="38" class="java.lang.String" itemvalue="moviepy" />
+            <item index="39" class="java.lang.String" itemvalue="httpx" />
+            <item index="40" class="java.lang.String" itemvalue="gradio" />
+            <item index="41" class="java.lang.String" itemvalue="shortuuid" />
+            <item index="42" class="java.lang.String" itemvalue="plotly" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E122" />
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="input" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="Stylelint" enabled="true" level="ERROR" enabled_by_default="true" />
+  </profile>
+</component>

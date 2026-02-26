@@ -10,7 +10,7 @@ viewer_show.*
 eval_video/
 task_config/
 **/.DS_Store
-policy/*
+
 vae_mine_results_state/*
 internvla_ckpt/*
 # eval result
