@@ -1,6 +1,6 @@
 # [ICLR 2026] Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning
 
- [[📜 Paper]](https://arxiv.org/pdf/2510.11027) [[⭐️Project Page]](https://internvl.github.io/blog/2025-10-11-Vlaser/) [[🤗 Model]](https://huggingface.co/collections/OpenGVLab/vlaser-68e9fd4178da453c348997f8) 
+ [[📜 Paper]](https://arxiv.org/pdf/2510.11027) [[⭐️Project Page]](https://internvl.github.io/blog/2025-10-11-Vlaser/) [[🤗 Model]](https://huggingface.co/collections/OpenGVLab/vlaser-68e9fd4178da453c348997f8) [[🤗 Dataset]](https://huggingface.co/datasets/ganlinyang/Vlaser) 
  <!-- [[📝 Chinese Post]](https://mp.weixin.qq.com/s/FmjG0Gp5ow7mm2Vzd9ppPg) -->
 
 
@@ -23,6 +23,7 @@ Furthermore, we systematically examine how different VLM initializations affect 
 - **`2025-11-7`**: 🤖 We release the training and inference code of Vlaser VLA based on [open-pi-zero](https://github.com/allenzren/open-pi-zero).
 - **`2026-01-27`**: 🤖 Vlaser was accepted by ICLR 2026, congrats!
 - **`2026-02-15`**: 🤖 We release the data pipeline for in-domain data based on [open-pi-zero](https://github.com/allenzren/open-pi-zero).
+- **`2026-03-18`**: 🤖 We release the training dataset [🤗Vlaser-6M](https://huggingface.co/datasets/ganlinyang/Vlaser), which could help you train your own embodied brain! 🔥🔥🔥
 
 
 ## 📆 Todo
@@ -31,7 +32,7 @@ Furthermore, we systematically examine how different VLM initializations affect 
 - [x] Release the training and evaluation code for Vlaser VLMs.
 - [x] Release the training and evaluation code for Vlaser VLAs.
 - [x] Release the Dataset Generation Pipeline.
-- [ ] Release the Vlaser-6M Dataset (Ongoing, expected on March, 2026).
+- [x] Release the Vlaser-6M Dataset.
 
 
 ## Vlaser VLM Quick Start
@@ -43,6 +44,9 @@ For RoboTwin 2.0, Please refer to [Vlaser_VLA/RoboTwin](./Vlaser_VLA/RoboTwin) f
 
 ## Data pipeline Quick Start
 Please refer to [data-pipeline](./data-pipeline) for details.
+
+## Vlaser-6M dataset Quick Start
+You can download our training dataset [🤗Vlaser-6M](https://huggingface.co/datasets/ganlinyang/Vlaser), which is categorized into **Robot_QA_data** (for general Robot QA tasks), **grounding_data** (for 2D robot grounding tasks), **planning_data** (for robotic planning tasks) and **spatial_data** (for spatial intelligence tasks). Each dataset is composed of a *.jsonl file for multimodal annotation and a *.tar.gz file for images/videos.
 
 ## 🎫 License
 
