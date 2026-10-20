@@ -5,6 +5,7 @@ Run from Vlaser_VLA/Simpler: python -m pytest -q tests
 
 import glob
 import sys
+import tempfile
 import types
 import unittest
 from unittest import mock
@@ -88,7 +89,7 @@ class EvalAgentDeviceTest(unittest.TestCase):
                 {
                     "n_eval_episode": 1,
                     "n_video": 0,
-                    "log_dir": "/tmp/vlaser_test_eval",
+                    "log_dir": tempfile.mkdtemp(),
                     "gpu_id": 0,
                     "use_torch_compile": False,
                     "act_steps": 4,
