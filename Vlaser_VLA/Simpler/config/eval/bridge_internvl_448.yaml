@@ -8,7 +8,7 @@ _target_: src.agent.eval.EvalAgent
 log_dir: ./eval_bridge_448_embodied_mixtrain_/${name}_${tag}_ta${act_steps}_${seed}/${env.task}_${now:%H-%M-%S}
 tag: ''
 name:
-device: cuda
+device:  # empty means detect (xpu, then cuda, then cpu)
 seed: 42
 checkpoint_path:
 n_eval_episode: 240     # octo simpler runs 3 seeds with 24 configs each, we will run 10 trials for each config

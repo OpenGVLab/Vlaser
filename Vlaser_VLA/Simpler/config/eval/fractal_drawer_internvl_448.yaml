@@ -7,7 +7,7 @@ _target_: src.agent.eval.EvalAgent
 
 log_dir: ${oc.env:VLA_LOG_DIR}/eval_fractal_448/${name}_ta${act_steps}_${seed}/${env.task}_${now:%H-%M-%S}
 name:
-device: cuda
+device:  # empty means detect (xpu, then cuda, then cpu)
 seed: 42
 checkpoint_path:
 n_eval_episode: ${eval:'3 * 4 * 9 * 10'}  # 3 drawers, 4 urdfs, 9 locations/rgb_overlay_paths, 10 trials each

@@ -17,6 +17,21 @@ This codebase is based on [open-pi-zero](https://github.com/allenzren/open-pi-ze
   ```
   if you have problem while installing dependencies with requirements.txt, you can install the dependencies from [InternVL](https://github.com/OpenGVLab/InternVL) and [open-pi-zero](https://github.com/allenzren/open-pi-zero) step by step.
 
+### How to run the same on Intel's XPU
+
+Skip the CUDA pins of `torch` and `torchvision` in `requirements.txt` and install the XPU build instead:
+
+```bash
+pip install torch torchvision --index-url https://download.pytorch.org/whl/xpu
+pip install transformers==4.48.0 hydra-core==1.3.2 omegaconf==2.3.0 einops timm opencv-python-headless sentencepiece bitsandbytes imageio decord
+```
+
+The vendored `src/model/internvl_chat/internvl` package is missing two modules that action inference imports (a `.gitignore` rule skips them). Restore them with `cp -rn ../../Vlaser_VLM/internvl_chat/internvl/* src/model/internvl_chat/internvl/` from this folder.
+
+Run the same evaluation scripts as above, with `ZE_AFFINITY_MASK=0` set (it selects the card the way `CUDA_VISIBLE_DEVICES=0` does) and `device=xpu:0` in place of `device=cuda:0`. The `device` field of the eval configs is empty by default, which picks XPU, then CUDA, then CPU. Attention in the action path is plain PyTorch, so flash-attn is not needed. `use_bf16=True` is the usual choice on XPU.
+
+The SimplerEnv simulator itself (ManiSkill2 and SAPIEN) is not part of this change and stays on its own CUDA or Vulkan setup.
+
 ## 📦 Training
 
 - Download [Vlaser Models](https://huggingface.co/collections/OpenGVLab/vlaser) before Training.

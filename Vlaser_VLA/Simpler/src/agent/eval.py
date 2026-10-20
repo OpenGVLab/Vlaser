@@ -13,6 +13,7 @@ import simpler_env
 import torch
 from omegaconf import OmegaConf
 from src.agent.variant_aggressive_config import find_suitable_args, find_suitable_args_match,get_env
+from src.utils.device import resolve_device
 from src.utils.monitor import log_allocated_gpu_memory, log_execution_time
 
 log = logging.getLogger(__name__)
@@ -27,7 +28,7 @@ class EvalAgent:
         os.makedirs(self.video_dir, exist_ok=True)
 
         # model
-        self.device = torch.device(f"cuda:{cfg.gpu_id}")
+        self.device = resolve_device(cfg.get("device"), cfg.gpu_id)
         self.dtype = torch.bfloat16 if cfg.get("use_bf16", False) else torch.float32
 
         if 'INTERNVL' in os.environ:
@@ -54,8 +55,8 @@ class EvalAgent:
         # modes: https://pytorch.org/docs/main/generated/torch.compile.html
         # backends: https://pytorch.org/docs/stable/torch.compiler.html
         self.model.eval()
-        log.info(f"Using cuda device: {self.device} dtype: {self.dtype}")
-        log_allocated_gpu_memory(log, "loading model")
+        log.info(f"Using {self.device.type} device: {self.device} dtype: {self.dtype}")
+        log_allocated_gpu_memory(log, "loading model", self.device)
         self.act_steps = (
             cfg.act_steps
         )  # e.g., run first two steps of predicted four steps

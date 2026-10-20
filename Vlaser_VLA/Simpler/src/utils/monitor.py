@@ -4,10 +4,13 @@ import time
 
 import torch
 
+from src.utils.device import default_device_type
+
 
 def log_allocated_gpu_memory(log=None, stage="loading model", device=0):
-    if torch.cuda.is_available():
-        allocated_memory = torch.cuda.memory_allocated(device)
+    device_type = device.type if isinstance(device, torch.device) else default_device_type()
+    if device_type != "cpu":
+        allocated_memory = getattr(torch, device_type).memory_allocated(device)
         msg = f"Allocated GPU memory after {stage}: {allocated_memory/1024/1024/1024:.2f} GB"
         print(msg) if log is None else log.info(msg)
 
